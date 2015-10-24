@@ -6,5 +6,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'Apregistration.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    #url(r'^grappelli/', include('grappelli.urls')), # Customised Django_admin Urls
     url(r'^admin/', include(admin.site.urls)),
 )

@@ -3,9 +3,23 @@ from models import  *
 # Register your models here.
 
 
+class StudentAdmin(admin.ModelAdmin):
+    list_display = ('Name','Enrollment_no','DOB','Degree','Session')
+    list_filter = ('Degree','Session')
+    search_fields = ('Enrollment_no','Name')
 
 
+class FacultyAdmin(admin.ModelAdmin):
+    list_display = ('id','name','email','Department')
+    list_filter = ('Designation','Department')
+    search_fields = ('name','id')
 
-admin.site.register(Student)
-admin.site.register(Faculty)
-admin.site.register(Course_details)
+class courseAdmin(admin.ModelAdmin):
+    list_display= ('code','title','type')
+    list_filter =('type',)
+    search_fields =('title',)
+
+
+admin.site.register(Student, StudentAdmin)
+admin.site.register(Faculty, FacultyAdmin)
+admin.site.register(Course_details, courseAdmin)
