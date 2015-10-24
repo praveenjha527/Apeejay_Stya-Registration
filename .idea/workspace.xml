@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8674f983-34b7-4486-8f23-d82f4c397354" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/db.sqlite3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/registration/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/registration/migrations/0002_auto_20151024_0725.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/registration/migrations/0003_auto_20151024_0728.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/registration/migrations/0004_course_details.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Apeejay_Stya-Registration.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/Apregistration/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/registration/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/registration/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/registration/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/manage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/registration/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/requiremnts.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/Apregistration/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/registration/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/Apregistration/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/registration/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apregistration/Apregistration/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Apeejay_Stya-Registration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -160,7 +134,7 @@
         <entry file="file://$USER_HOME$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6455696">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -709,7 +683,7 @@
     <entry file="file://$USER_HOME$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6455696">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
           <folding />
         </state>
       </provider>
