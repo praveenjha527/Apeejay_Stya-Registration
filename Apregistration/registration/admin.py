@@ -22,4 +22,4 @@ class courseAdmin(admin.ModelAdmin):
 
 admin.site.register(Student, StudentAdmin)
 admin.site.register(Faculty, FacultyAdmin)
-admin.site.register(Course_details, courseAdmin)
+admin.site.register(course_details, courseAdmin)
