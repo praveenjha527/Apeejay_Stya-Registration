@@ -1,9 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractUser,User
+from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 
 class Faculty(models.Model):
+    class Meta:
+        verbose_name= _("Faculty")
+        verbose_name_plural= _("Faculties")
+
     TYPE_OF_FACULTY=(
         ('HOD','Head of Department'),
         ('D','DEAN'),
@@ -45,6 +50,10 @@ class Student(models.Model):
 
 
 class Course_details(models.Model):
+    class Meta:
+        verbose_name= _("Course Details")
+        verbose_name_plural = _("Course_Details")
+
     COURSE_CHOICES=(
         ('D','DEGREE'),
         ('O','OPEN'),
