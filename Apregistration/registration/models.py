@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import BaseUserManager, AbstractUser,User
 
 # Create your models here.
 
@@ -10,6 +11,7 @@ class Faculty(models.Model):
         ('L','Lab-Assistant'),
     )
 
+    faculty_user=models.ForeignKey(User, unique=True)
     id=models.CharField(max_length=100, primary_key=True)
     name=models.CharField(max_length=100)
     email=models.CharField(max_length=100)
@@ -25,7 +27,7 @@ class Student(models.Model):
         ('F','FEMALE'),
     )
 
-
+    user=models.ForeignKey(User, unique=True)
     Enrollment_no=models.CharField(max_length=16, primary_key=True)
     Name=models.CharField(max_length=100)
     DOB=models.DateField()
