@@ -51,7 +51,7 @@ class course_details(models.Model):
 
 
 class Student(models.Model):
-    GENDER_CHOICES=(
+    GENDER_CHOICES= (
         ('M','MALE'),
         ('F','FEMALE'),
     )

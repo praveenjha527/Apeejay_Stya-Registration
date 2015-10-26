@@ -1,23 +1,23 @@
 from django.contrib import admin
-from models import  *
+from models import *
 # Register your models here.
 
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('Name','Enrollment_no','DOB','Degree','Session')
-    list_filter = ('Degree','Session')
-    search_fields = ('Enrollment_no','Name')
+    list_display = ('Name', 'Enrollment_no', 'DOB', 'Degree', 'Session')
+    list_filter = ('Degree', 'Session')
+    search_fields = ('Enrollment_no', 'Name')
 
 
 class FacultyAdmin(admin.ModelAdmin):
-    list_display = ('id','name','email','Department')
-    list_filter = ('Designation','Department')
-    search_fields = ('name','id')
+    list_display = ('id', 'name', 'email', 'Department')
+    list_filter = ('Designation', 'Department')
+    search_fields = ('name', 'id')
 
 class courseAdmin(admin.ModelAdmin):
-    list_display= ('code','title','type')
-    list_filter =('type',)
-    search_fields =('title',)
+    list_display= ('code', 'title', 'type')
+    list_filter= ('type',)
+    search_fields= ('title',)
 
 
 admin.site.register(Student, StudentAdmin)
