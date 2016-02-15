@@ -6,6 +6,7 @@ from models import *
 
 class Courseinline(admin.StackedInline):
     model = course_details
+    fields=('code','type','title','University_sem','credit','faculty',)
 
 class StudentAdmin(admin.ModelAdmin):
     list_display = ('Name', 'Enrollment_no', 'DOB', 'Degree', 'Session')
@@ -21,6 +22,9 @@ class FacultyAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'email', 'Department')
     list_filter = ('Designation', 'Department')
     search_fields = ('name', 'id')
+    inlines = [
+        Courseinline,
+    ]
 
 class courseAdmin(admin.ModelAdmin):
     list_display= ('code', 'title', 'type')

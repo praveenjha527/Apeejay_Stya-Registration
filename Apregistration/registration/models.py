@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
+from simple_history.models import HistoricalRecords
 
 # Create your models here.
 
@@ -24,6 +25,7 @@ class Faculty(models.Model):
     Address=models.CharField(max_length=200)
     Designation=models.CharField(max_length=4, choices=TYPE_OF_FACULTY)
     Department=models.CharField(max_length=100)
+    history = HistoricalRecords()
 
     def __unicode__(self):
         return  self.name
@@ -51,6 +53,7 @@ class Student(models.Model):
     Session=models.CharField(max_length=100)
     Address=models.CharField(max_length=100)
     Mentor=models.ForeignKey(Faculty)
+    history = HistoricalRecords()
 
     def __unicode__(self):
         return self.Enrollment_no
@@ -75,6 +78,7 @@ class course_details(models.Model):
     credit=models.IntegerField(default=None)
     faculty=models.ForeignKey(Faculty)
     student=models.ForeignKey(Student)
+    history = HistoricalRecords()
 
     def __unicode__(self):
         return self.code
