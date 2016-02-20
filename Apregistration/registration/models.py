@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import json
 from django.utils.translation import gettext_lazy as _
 from simple_history.models import HistoricalRecords
 
@@ -29,6 +30,7 @@ class Faculty(models.Model):
 
     def __unicode__(self):
         return  self.name
+
 class Student(models.Model):
     GENDER_CHOICES= (
         ('M','MALE'),
@@ -71,18 +73,60 @@ class course_details(models.Model):
         ('O','OPEN'),
         ('C','CORE')
     )
-    code=models.CharField(max_length=100)
+    code=models.CharField(max_length=100,primary_key=True)
     type=models.CharField(max_length=1, choices=COURSE_CHOICES)
+    pre_requisite=models.ManyToManyField('self',blank=True,null=True)
     title=models.CharField(max_length=100)
     University_sem=models.CharField(max_length=100)
     credit=models.IntegerField(default=None)
-    faculty=models.ForeignKey(Faculty)
-    student=models.ForeignKey(Student)
+    faculty=models.ManyToManyField(Faculty,blank=True,null=True)
+    # Registration=models.ForeignKey(Semester_Wise_Registration,default='')
+    # category=models.CharField(max_length=3,choices=)
     history = HistoricalRecords()
 
     def __unicode__(self):
         return self.code
 
+    def set_pre_requisite(self,x):
+        self.pre_requisite=json.dumps(x)
+
+    def get_pre_requisite(self,x):
+        return json.loads(self.pre_requisite)
+
     def calculate_semester(self):
         pass
+
+
+class Semester_Wise_Registration(models.Model):
+    STATUS_CHOICES=(
+        ('N','NOT-ATTEMPTED'),
+        ('P','PASS'),
+        ('I','IMPROVEMENT'),
+        ('R','RE-APPEAR')
+    )
+
+
+    University_Sem=models.CharField(max_length=100)
+    course=models.ManyToManyField(course_details)
+    student=models.ForeignKey(Student)
+    created_date = models.DateTimeField(auto_now_add=True,blank=True,null=True)
+    modified_date = models.DateTimeField(auto_now=True,blank=True,null=True)
+    status=models.CharField(max_length=3,choices=STATUS_CHOICES)
+
+
+    class Meta:
+        verbose_name= _("Course_Registration")
+        verbose_name_plural= _("Course_Registrations")
+        unique_together= ('student','University_Sem')
+
+
+    def __unicode__(self):
+        return self.University_Sem
+
+    def max_min_courses(self):
+        course=self.Course
+        if course:
+            print len(course)
+
+
 
